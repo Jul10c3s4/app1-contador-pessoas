@@ -180,6 +180,9 @@ class _HomePageState extends State<HomePage> {
                                 setState(() {
                                   clientes.remove(clientes[index]);
                                   quant_pessoas--;
+                                  if (quant_pessoas < 20 && _controller != "") {
+                                    status = "Pode entrar";
+                                  }
                                 });
                               },
                             ),
